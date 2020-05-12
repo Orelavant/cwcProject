@@ -11,9 +11,9 @@ public class Creature1Controller : MonoBehaviour {
     public float speed = 10f;
 
     // Location fields
-    public float xBounds = 15f;
-    public float yUpperBounds = 20f;
-    public float yLowerBounds = 0f;
+    private float xBounds = 15f;
+    private float yUpperBounds = 20f;
+    private float yLowerBounds = 0f;
 
     // Physics
     private Rigidbody playerRb;
