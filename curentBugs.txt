@@ -1,0 +1,3 @@
+Bug List:
+- Flying creature can go into ground
+- If flying creature hits ground creature from the top while ground creature is on the ground, they can fall through the ground.
