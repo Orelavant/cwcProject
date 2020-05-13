@@ -48,8 +48,8 @@ public class Creature1Controller : MonoBehaviour {
         if (transform.position.y < yLowerBounds) {
             transform.position = new Vector3(transform.position.x, yLowerBounds, transform.position.z);
         }
-
-        // Cancel out added velocity from bumping
-
+        if (transform.position.y < 0) {
+            transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+        }
     }
 }
