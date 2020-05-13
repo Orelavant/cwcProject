@@ -17,6 +17,7 @@ public class Creature1Controller : MonoBehaviour {
 
     // Physics
     private Rigidbody playerRb;
+    public float foodBumpStrength = 10;
 
     // Start is called before the first frame update
     void Start() {
@@ -51,5 +52,17 @@ public class Creature1Controller : MonoBehaviour {
         if (transform.position.y < 0) {
             transform.position = new Vector3(transform.position.x, 0, transform.position.z);
         }
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.CompareTag("Food2")) {
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * foodBumpStrength, ForceMode.Impulse);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.CompareTag("Food1")) {
+            Destroy(other.gameObject);
+        } 
     }
 }

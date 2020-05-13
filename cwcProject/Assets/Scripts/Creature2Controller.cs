@@ -16,6 +16,7 @@ public class Creature2Controller : MonoBehaviour
     // Physics
     private Rigidbody playerRb;
     public float gravityModifier;
+    public float foodBumpStrength = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -52,5 +53,14 @@ public class Creature2Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground")) {
             onGround = true;
         }
+        if (collision.gameObject.CompareTag("Food1")) {
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * foodBumpStrength, ForceMode.Impulse);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.CompareTag("Food2")) {
+            Destroy(other.gameObject);
+        } 
     }
 }

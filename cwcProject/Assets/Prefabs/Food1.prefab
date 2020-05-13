@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7418688764350862351}
   - component: {fileID: 54761034345215520}
   - component: {fileID: 114324712447249906}
+  - component: {fileID: 136551542590362892}
   m_Layer: 0
   m_Name: Food1
-  m_TagString: Food
+  m_TagString: Food1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5a90989aa21cfe54db076858b381372e, type: 2}
+  - {fileID: 2100000, guid: 719816bd0b2c7bb4693d28ec790c3dfc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -122,3 +123,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0e294c0ef8aee4c8654bf7fa40beb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &136551542590362892
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7418688764350862344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
